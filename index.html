@@ -9,27 +9,34 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
+		<div class="main">
+			<!-- Slack Name -->
+		<h1 data-testidid="slackUserName" id="slackUserName">Abdulrazaq sodiq</h1>
+		<!-- Slack Display Picture -->
 		<img
 			data-testidid="slackDisplayImage"
-			class="slackDisplayImage"
-			src="/images/sodiq.jpeg"
+			id="slackDisplayImage"
+			src="https://ca.slack-edge.com/T05FFAA91JP-U05RDN1PZDY-c1e81595a1e6-512"
 			alt="Abdulrazaq sodiq" />
-		<h1 data-testidid="slackUserName">Abdulrazaq sodiq</h1>
-		<p data-testidid="myTrack">Frontend</p>
-		<p data-testidid="currentDayOfTheWeek" id="currentDayOfTheWeek">
-			Loading...
-		</p>
-		<p data-testidid="currentUTCTime" id="currentUTCTime">Loading...</p>
+			<!-- Current Day of the Week -->
+			<p data-testidid="currentDayOfTheWeek" id="currentDayOfTheWeek">
+				sunday
+			</p>
+			<!-- Current UTC Time -->
+		<p data-testidid="currentUTCTime" id="currentUTCTime">1694353047398</p>
+		<!--My Track -->
+		<p data-testidid="myTrack" id="myTrack">Frontend</p>
+	 <!-- GitHub URL -->
 		<p>
 			Click here to:
 			<a
 				data-testidid="githubURL"
-				class="githubURL"
+				id="githubURL"
 				href="https://github.com/sodiq247/Zuri-stage1"
 				>My GitHub repository</a
 			>
 		</p>
-
+	</div>
 		<script src="/script.js"></script>
 	</body>
 </html>

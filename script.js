@@ -1,7 +1,7 @@
 /** @format */
-
-var today = new Date();
-var weekdays = [
+function currentDayAndTime() {
+const date = new Date();
+const weekdays = [
 	"Sunday",
 	"Monday",
 	"Tuesday",
@@ -10,10 +10,21 @@ var weekdays = [
 	"Friday",
 	"Saturday",
 ];
-var dayOfWeek = weekdays[today.getDay()];
-var utcTimeMilliseconds = today.getTime();
+const dayOfWeek = weekdays[date.getUTCDay()];
 
-var today = document.getElementById("currentDayOfTheWeek");
+const currentUTCTime = Date.now();
+const formattedTime = new Date(currentUTCTime).toISOString().substr(11, 12);
+
+// Get currentDayOfTheWeek and currentUTTime
+const today = document.getElementById("currentDayOfTheWeek");
 today.innerHTML = "Today is: " + dayOfWeek;
-var Time = document.getElementById("currentUTCTime");
-Time.innerHTML = "Current UTC Time in Milliseconds: " + utcTimeMilliseconds;
+const Time = document.getElementById("currentUTCTime");
+Time.innerHTML = currentUTCTime;
+}
+
+// Update every 100 milliseconds (0.1 seconds)
+setInterval(currentDayAndTime, 100); 
+
+// Call the function initially
+currentDayAndTime();
+
