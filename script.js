@@ -17,7 +17,7 @@ const formattedTime = new Date(currentUTCTime).toISOString().substr(11, 12);
 
 // Get currentDayOfTheWeek and currentUTTime
 const today = document.getElementById("currentDayOfTheWeek");
-today.innerHTML = "Today is: " + dayOfWeek;
+today.innerHTML = dayOfWeek;
 const Time = document.getElementById("currentUTCTime");
 Time.innerHTML = currentUTCTime;
 }
